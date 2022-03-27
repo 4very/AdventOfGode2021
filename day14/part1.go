@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"regexp"
 )
 
@@ -33,8 +32,6 @@ func maxMinusMin(s string) int {
 func part1(data []string) int {
 
 	var str string = data[0]
-
-	fmt.Println(str)
 
 	var instructions map[string]string = make(map[string]string)
 	instrRegex := regexp.MustCompile(`(.*) -> (.*)`)
