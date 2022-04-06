@@ -3,9 +3,6 @@ package main
 import (
 	"fmt"
 	"math"
-	"os"
-
-	"github.com/4very/AdventOfGode2021/helper"
 )
 
 type chiton struct {
@@ -40,9 +37,7 @@ func pprintPath(path []*chiton) {
 	fmt.Println()
 }
 
-func main() {
-	args := os.Args[1:]
-	data := helper.ReadFile(args[0])
+func part1(data []string) int {
 
 	height := len(data)
 	width := len(data[0])
@@ -79,7 +74,7 @@ func main() {
 		}
 	}
 
-	fmt.Println(lowestPath(chitons[0], chitons[len(chitons)-1], chitons))
+	return lowestPath(chitons[0], chitons[len(chitons)-1], chitons)
 
 }
 
